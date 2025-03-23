@@ -149,7 +149,7 @@ export const siteConfig = {
                 title: "Gagandeep Singh | Portfolio Website",
                 description:
                     "This is my portfolio website. I built it to showcase my projects and skills. It is a static site built with Next.js, Tailwind CSS and React.js. I used the following technologies to build it:",
-                // logo: "/logox.png",
+                logo: "",
                 repoLink: "https://github.com/GAGAN4980/deepfolio",
                 technologies: [
                     {

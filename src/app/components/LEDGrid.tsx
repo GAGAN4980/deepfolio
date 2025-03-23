@@ -62,7 +62,7 @@ const LEDGrid = ({ triggerAt }: LEDGridProps) => {
       }
 
       // Activate randomly if not already active
-      if (lifetimes[i] <= 0 && Math.random() < 0.0006) {
+      if (lifetimes[i] <= 0 && Math.random() < 0.00009) {
         lifetimes[i] = 1.0;
       }
 
