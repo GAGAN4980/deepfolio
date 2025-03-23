@@ -42,7 +42,7 @@ export default function TableOfContents() {
 
             scrollTimeoutRef.current = setTimeout(() => {
                 setIsManualScroll(false);
-            }, 100); // Adjust this value if needed
+            }, 100);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -59,6 +59,11 @@ export default function TableOfContents() {
     const handleLinkClick = (sectionId: string) => {
         setIsManualScroll(true);
         setActiveSection(sectionId);
+
+        const target = document.getElementById(sectionId);
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
     };
 
     return (
@@ -73,23 +78,24 @@ export default function TableOfContents() {
                 <div key={index} className="flex items-center mb-4">
                     <Link
                         href={`#${section.id}`}
-                        onClick={() => handleLinkClick(section.id)}
-                        className={`flex items-center gap-2 group ${
-                            activeSection === section.id ? "active" : ""
-                        }`}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleLinkClick(section.id);
+                        }}
+                        className={`flex items-center gap-2 group`}
                     >
                         <hr
                             className={`w-8 h-[1px] transition-all duration-300 ${
                                 activeSection === section.id
-                                    ? "!w-16 bg-slate-100"
-                                    : "bg-slate-350 group-hover:w-16"
+                                    ? "!w-16 bg-teal-400"
+                                    : "bg-slate-500 group-hover:w-16 group-hover:bg-sky-400"
                             }`}
                         />
                         <span
-                            className={`transition-all duration-300 text-[10px] tracking-widest ${
+                            className={`transition-all duration-300 text-[10px] tracking-widest uppercase ${
                                 activeSection === section.id
-                                    ? "text-slate-100 font-semibold"
-                                    : "text-slate-350 group-hover:text-slate-100"
+                                    ? "text-teal-400 font-semibold"
+                                    : "text-slate-400 group-hover:text-sky-300"
                             }`}
                         >
                             {section.label}

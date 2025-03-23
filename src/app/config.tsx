@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin, FaSquareXTwitter, FaDiscord } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
-import { SiAngular, SiGodotengine } from "react-icons/si";
+import { SiAngular, SiGodotengine, SiTeamcity } from "react-icons/si";
 import {
     RiNextjsFill,
     RiTailwindCssFill,
@@ -149,8 +149,8 @@ export const siteConfig = {
                 title: "Gagandeep Singh | Portfolio Website",
                 description:
                     "This is my portfolio website. I built it to showcase my projects and skills. It is a static site built with Next.js, Tailwind CSS and React.js. I used the following technologies to build it:",
-                logo: "/logox.png",
-                repoLink: "https://github.com/auroradream04/aurora-portfolio",
+                // logo: "/logox.png",
+                repoLink: "https://github.com/GAGAN4980/deepfolio",
                 technologies: [
                     {
                         icon: <RiNextjsFill className="text-[#FFF]" />,
@@ -391,7 +391,7 @@ export const siteConfig = {
                 },
                 {
                     name: "TeamCity",
-                    icon: <SiJetbrains className="text-[#000000]" />,
+                    icon: <SiTeamcity className="text-[#FFF]" />,
                 },
                 {
                     name: "SpecFlow",

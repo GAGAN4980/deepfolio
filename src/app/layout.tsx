@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import StarsCanvas from "./components/StarBackground";
+import LEDSkyCanvas from "./components/LEDSkyCanvas";
 import Glow from "./components/Glow";
 import { Inter } from "next/font/google";
 import { siteConfig } from "./config";
@@ -42,7 +42,7 @@ export default function RootLayout({
     return (
         <html lang="en" className="dark">
             <head>
-                <link
+                {/* <link
                     rel="icon"
                     type="image/png"
                     href="/favicon-48x48.png"
@@ -57,15 +57,15 @@ export default function RootLayout({
                 />
                 <meta
                     name="apple-mobile-web-app-title"
-                    content="AlvinChang.dev"
-                />
+                    content="Deepfolio.dev"
+                />  */}
                 <link rel="manifest" href="/site.webmanifest" />
             </head>
             <body
                 className={`${inter.className} antialiased bg-background text-slate-100`}
             >
-                <StarsCanvas />
-                <Glow />
+                <LEDSkyCanvas />
+                {/* <Glow /> */}
                 <Toaster />
                 <Plausible />
                 {children}

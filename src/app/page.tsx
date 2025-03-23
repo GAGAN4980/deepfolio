@@ -35,8 +35,8 @@ export default async function Home() {
                             taglines={siteConfig.taglines}
                             className="pl-1 text-center lg:text-start text-xs lg:text-sm mt-4 min-h-20 max-w-[500px] text-slate-350"
                         />
-                        <TableOfContents />
                         <HireMeButton isSticky />
+                        <TableOfContents />
                     </div>
                     <div>
                         <SocialIcons isSticky />
